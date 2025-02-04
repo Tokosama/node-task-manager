@@ -5,6 +5,7 @@ const tasks = require('./routes/tasks')
 const connectDB = require('./db/connect')
 
 //middleware 
+app.use(express.static('public')) ////// ce qui permet de connecter la backend avec le front 
 app.use(express.json())
 
 //routes
