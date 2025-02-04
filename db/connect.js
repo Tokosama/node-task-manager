@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const connectionString =process.env.MONGOURI
+const connectDB = (url)=>{
+  return mongoose.connect(url)
+  
+}
 
-mongoose
-  .connect(connectionString)
-  .then(() => console.log("connected"))
-  .catch((err) => console.log("not working"));
+module.exports = connectDB
